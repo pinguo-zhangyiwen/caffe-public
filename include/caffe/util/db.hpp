@@ -181,7 +181,6 @@ class LMDB : public DB {
   MDB_dbi mdb_dbi_;
 };
 
-DB* GetDB(DataParameter::DB backend);
 DB* GetDB(const string& backend);
 
 }  // namespace db

@@ -41,20 +41,20 @@ class DBTest : public ::testing::Test {
 
   virtual ~DBTest() { }
 
-  DataParameter_DB backend_;
+  string backend_;
   string source_;
   string root_images_;
 };
 
 struct TypeLevelDB {
-  static DataParameter_DB backend;
+  static string backend;
 };
-DataParameter_DB TypeLevelDB::backend = DataParameter_DB_LEVELDB;
+string TypeLevelDB::backend = "leveldb";
 
 struct TypeLMDB {
-  static DataParameter_DB backend;
+  static string backend;
 };
-DataParameter_DB TypeLMDB::backend = DataParameter_DB_LMDB;
+string TypeLMDB::backend = "lmdb";
 
 // typedef ::testing::Types<TypeLmdb> TestTypes;
 typedef ::testing::Types<TypeLevelDB, TypeLMDB> TestTypes;

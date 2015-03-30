@@ -433,10 +433,6 @@ message ConvolutionParameter {
 
 // Message that stores parameters used by DataLayer
 message DataParameter {
-  enum DB {
-    LEVELDB = 0;
-    LMDB = 1;
-  }
   // Specify the data source.
   optional string source = 1;
   // Specify the batch size.
@@ -446,7 +442,7 @@ message DataParameter {
   // point would be set as rand_skip * rand(0,1). Note that rand_skip should not
   // be larger than the number of keys in the database.
   optional uint32 rand_skip = 7 [default = 0];
-  optional DB backend = 8 [default = LEVELDB];
+  optional string backend = 8 [default = "leveldb"];
   // DEPRECATED. See TransformationParameter. For data pre-processing, we can do
   // simple scaling and subtracting the data mean, if provided. Note that the
   // mean subtraction is always carried out before scaling.

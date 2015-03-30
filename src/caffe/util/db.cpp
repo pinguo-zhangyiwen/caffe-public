@@ -59,17 +59,6 @@ void LMDBTransaction::Put(const string& key, const string& value) {
   MDB_CHECK(mdb_put(mdb_txn_, *mdb_dbi_, &mdb_key, &mdb_value, 0));
 }
 
-DB* GetDB(DataParameter::DB backend) {
-  switch (backend) {
-  case DataParameter_DB_LEVELDB:
-    return new LevelDB();
-  case DataParameter_DB_LMDB:
-    return new LMDB();
-  default:
-    LOG(FATAL) << "Unknown database backend";
-  }
-}
-
 DB* GetDB(const string& backend) {
   if (backend == "leveldb") {
     return new LevelDB();
