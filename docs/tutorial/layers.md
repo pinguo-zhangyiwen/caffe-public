@@ -316,7 +316,7 @@ Common input preprocessing (mean subtraction, scaling, random cropping, and mirr
         - `batch_size`: the number of inputs to process at one time
     - Optional
         - `rand_skip`: skip up to this number of inputs at the beginning; useful for asynchronous sgd
-        - `backend` [default `LEVELDB`]: choose whether to use a `LEVELDB` or `LMDB`
+        - `backend` [default `"leveldb"`]: choose whether to use a `"leveldb"` or `"lmdb"`
 
 
 
@@ -468,7 +468,7 @@ The `SLICE` layer is a utility layer that slices an input layer to multiple outp
         }
       }
 
-`slice_dim` indicates the target dimension and can assume only two values: 0 for num or 1 for channel; `slice_point` indicates indexes in the selected dimension (the number of indexes must be equal to the number of top blobs minus one). 
+`slice_dim` indicates the target dimension and can assume only two values: 0 for num or 1 for channel; `slice_point` indicates indexes in the selected dimension (the number of indexes must be equal to the number of top blobs minus one).
 
 
 #### Elementwise Operations

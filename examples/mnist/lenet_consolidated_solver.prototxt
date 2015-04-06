@@ -51,7 +51,7 @@ net_param {
     top: "label"
     data_param {
       source: "examples/mnist/mnist_train_lmdb"
-      backend: LMDB
+      backend: "lmdb"
       batch_size: 64
     }
     transform_param {
@@ -66,7 +66,7 @@ net_param {
     top: "label"
     data_param {
       source: "examples/mnist/mnist_test_lmdb"
-      backend: LMDB
+      backend: "lmdb"
       batch_size: 100
     }
     transform_param {
@@ -84,7 +84,7 @@ net_param {
     top: "label"
     data_param {
       source: "examples/mnist/mnist_train_lmdb"
-      backend: LMDB
+      backend: "lmdb"
       batch_size: 100
     }
     transform_param {

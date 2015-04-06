@@ -22,8 +22,8 @@ This data layer definition
       data_param {
         # path to the DB
         source: "examples/mnist/mnist_train_lmdb"
-        # type of DB: LEVELDB or LMDB (LMDB supports concurrent reads)
-        backend: LMDB
+        # type of DB: "leveldb" or "lmdb" (LMDB supports concurrent reads)
+        backend: "lmdb"
         # batch processing improves efficiency.
         batch_size: 64
       }

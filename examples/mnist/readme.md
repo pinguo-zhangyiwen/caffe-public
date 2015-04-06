@@ -43,7 +43,7 @@ Currently, we will read the MNIST data from the lmdb we created earlier in the d
       type: DATA
       data_param {
         source: "mnist_train_lmdb"
-        backend: LMDB
+        backend: "lmdb"
         batch_size: 64
         scale: 0.00390625
       }
