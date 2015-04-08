@@ -47,14 +47,14 @@ class DBTest : public ::testing::Test {
 };
 
 struct TypeLevelDB {
-  static string backend;
+  static char backend[];
 };
-string TypeLevelDB::backend = "leveldb";
+char TypeLevelDB::backend[] = "leveldb";
 
 struct TypeLMDB {
-  static string backend;
+  static char backend[];
 };
-string TypeLMDB::backend = "lmdb";
+char TypeLMDB::backend[] = "lmdb";
 
 // typedef ::testing::Types<TypeLmdb> TestTypes;
 typedef ::testing::Types<TypeLevelDB, TypeLMDB> TestTypes;

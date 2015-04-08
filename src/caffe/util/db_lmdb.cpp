@@ -1,7 +1,8 @@
 #include "caffe/util/db_lmdb.hpp"
 
-#include <string>
 #include <sys/stat.h>
+
+#include <string>
 
 namespace caffe { namespace db {
 
